@@ -4,25 +4,25 @@ class Veld < Formula
   desc "Zero-trust mesh VPN daemon and CLI"
   homepage "https://veld.io"
   license "MIT"
-  version "0.1.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/veldmesh/veld/releases/download/v#{version}/veld-v#{version}-darwin_arm64.tar.gz"
-      sha256 "4d645fbdbff78eafb505229a6fee2731fd59c00b811b6e8446a88ee42d161450"
+      sha256 "68e0b57e73326b72e89b053d1f489b4da58184ecbe13518d97bf0ba49127725c"
     else
       url "https://github.com/veldmesh/veld/releases/download/v#{version}/veld-v#{version}-darwin_amd64.tar.gz"
-      sha256 "977608133310773dc7e073ff7a1b72ae8684c7a89d6712b1cf58900adc47b5c7"
+      sha256 "fc8ecdf1fe43a698762d9ba75cdc2d3047307b818ecec249b280fe20cbbff3d2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/veldmesh/veld/releases/download/v#{version}/veld-v#{version}-linux_arm64.tar.gz"
-      sha256 "5aeb562df77cbce7c288e45cbcd1839de46b00b143e954f90916e3d012a215b2"
+      sha256 "bd3e4e4dea67b514ed4fd7ef4e112891fe0b5231149168a6ad0c22aaf23cfe9d"
     else
       url "https://github.com/veldmesh/veld/releases/download/v#{version}/veld-v#{version}-linux_amd64.tar.gz"
-      sha256 "b494b9dd35bd81477c4e9151efe538da9007206ddbf69f3184562c9a57a104e9"
+      sha256 "52604bf3f1c763645de26f0c1079319efb93285555d52ef848f1c0b12b68093d"
     end
   end
 
